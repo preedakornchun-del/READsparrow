@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv*/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mplconfig/
+demo-output*/
+benchmark-output*/
+release_audit/
+.DS_Store

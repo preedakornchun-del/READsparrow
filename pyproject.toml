@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readsparrow"
+version = "0.12.1"
+description = "Streaming CRISPR counting with a DataFrame API and descriptive QC"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Preedakorn Chunhacha"}]
+keywords = ["CRISPR", "FASTQ", "guide counting", "quality control"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = ["numpy>=1.24", "pandas>=1.5"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.6"]
+legacy = ["scipy>=1.10"]
+excel = ["openpyxl>=3.1"]
+test = ["pytest>=7", "matplotlib>=3.6", "scipy>=1.10"]
+
+[project.scripts]
+readsparrow = "readsparrow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"
+
+[project.urls]
+Homepage = "https://github.com/preedakornchun-del/READsparrow"
+Repository = "https://github.com/preedakornchun-del/READsparrow"
+Issues = "https://github.com/preedakornchun-del/READsparrow/issues"

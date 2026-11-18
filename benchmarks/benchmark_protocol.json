@@ -1,0 +1,22 @@
+{
+  "scope": "Software engineering timing and memory characterization, not biological/FDR validation",
+  "seed": 2026111701,
+  "reference_guides": 1000,
+  "guide_length": 20,
+  "generated_fastq_records": 500000,
+  "fixture_mixture": "80% exact forward,10% missing anchors,10% N spacer; fixed deterministic pattern",
+  "primary_reads": 100000,
+  "primary_modes": ["baseline", "strict", "api", "auto", "tolerant", "mixed"],
+  "repeats": 3,
+  "order": "Each repeat rotates the six methods by its repeat index; one subprocess at a time",
+  "memory_mode": "api",
+  "memory_prefix_sizes": [50000, 200000, 500000],
+  "memory_repeats": 3,
+  "total_units": 27,
+  "threads": 1,
+  "timeout_seconds_per_unit": 180,
+  "total_wall_budget_seconds": 1800,
+  "metrics": "process user+system CPU, external elapsed, loop CPU/wall, macOS peakRSS bytes including imports",
+  "comparison": "Baseline and new strict use the same Python/environment/input/library. Count vectors/categories/non-timing baseline metrics must match; runtime is measured with variability, never claimed identical by construction.",
+  "memory_limit": "No40M-read run; constant-read-memory architecture and observed prefix RSS only"
+}

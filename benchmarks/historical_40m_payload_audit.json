@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-17T15:23:47.515524+00:00",
+  "passed": true,
+  "uncompressed_bytes": 3503111200,
+  "uncompressed_sha256": "f364fcdd58c680ac091bf5cc2dd57fa4b92878102b78eff1ed2deac26980e59c",
+  "payload_equal_80_sequential_fixture_copies": true,
+  "hashing_buffer_bytes": 1048576,
+  "gzip_container_header_timestamp_can_differ_on_replay": true,
+  "deterministic_comparison_unit": "Uncompressed FASTQ bytes and count vectors; archived compressed-byte SHA also retained."
+}

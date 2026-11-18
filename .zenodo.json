@@ -1,0 +1,10 @@
+{
+  "title": "READsparrow v0.12.1: streaming CRISPR guide counting and quality control",
+  "upload_type": "software",
+  "description": "Stable counting/QC release with Python/Pandas API, optional auto/mixed read orientation, optional one-substitution anchors with exact spacer matching, descriptive QC plots, small synthetic test data with independently specified expected counts/QC, regression tests, environment lock and reproduction commands. Legacy statistical hit calling is experimental; this release makes no biological FDR certification claim. The 40M-read engineering check used a repeated 500k-read fixture and 1000-guide reference, not independent biological replicates.",
+  "creators": [{"name": "Chunhacha, Preedakorn", "orcid": "0000-0002-5060-7113"}],
+  "license": "MIT",
+  "version": "0.12.1",
+  "keywords": ["CRISPR", "FASTQ", "guide counting", "quality control", "reproducible software"],
+  "related_identifiers": [{"identifier": "https://github.com/preedakornchun-del/READsparrow", "relation": "isSupplementTo", "scheme": "url"}]
+}

@@ -1,0 +1,84 @@
+{
+  "utc": "2026-11-17T14:51:22.933026+00:00",
+  "completed_units": 27,
+  "timing": [
+    {
+      "mode": "baseline",
+      "repeats": 3,
+      "CPU_seconds": 0.372326,
+      "external_elapsed_seconds": 0.5734767920002923,
+      "peak_RSS_bytes": 36868096,
+      "loop_CPU_seconds": 0.24642500000000003,
+      "CPU_min": 0.364575,
+      "CPU_max": 0.49267800000000006
+    },
+    {
+      "mode": "strict",
+      "repeats": 3,
+      "CPU_seconds": 0.367889,
+      "external_elapsed_seconds": 0.5695427500031656,
+      "peak_RSS_bytes": 36831232,
+      "loop_CPU_seconds": 0.248008,
+      "CPU_min": 0.36667099999999997,
+      "CPU_max": 0.374648
+    },
+    {
+      "mode": "api",
+      "repeats": 3,
+      "CPU_seconds": 0.652161,
+      "external_elapsed_seconds": 0.931014875000983,
+      "peak_RSS_bytes": 77164544,
+      "loop_CPU_seconds": 0.26311199999999996,
+      "CPU_min": 0.643508,
+      "CPU_max": 0.712116
+    },
+    {
+      "mode": "auto",
+      "repeats": 3,
+      "CPU_seconds": 0.6877629999999999,
+      "external_elapsed_seconds": 0.9357020840034238,
+      "peak_RSS_bytes": 77426688,
+      "loop_CPU_seconds": 0.25233700000000003,
+      "CPU_min": 0.68703,
+      "CPU_max": 0.6915119999999999
+    },
+    {
+      "mode": "tolerant",
+      "repeats": 3,
+      "CPU_seconds": 0.68606,
+      "external_elapsed_seconds": 0.9288747079990571,
+      "peak_RSS_bytes": 77799424,
+      "loop_CPU_seconds": 0.291926,
+      "CPU_min": 0.6746840000000001,
+      "CPU_max": 0.704472
+    },
+    {
+      "mode": "mixed",
+      "repeats": 3,
+      "CPU_seconds": 0.655448,
+      "external_elapsed_seconds": 0.8766185830027098,
+      "peak_RSS_bytes": 77422592,
+      "loop_CPU_seconds": 0.265788,
+      "CPU_min": 0.654158,
+      "CPU_max": 0.659593
+    }
+  ],
+  "memory_prefixes": [
+    {
+      "reads": 50000,
+      "RSS_MiB_median": 74.2109375
+    },
+    {
+      "reads": 200000,
+      "RSS_MiB_median": 74.2734375
+    },
+    {
+      "reads": 500000,
+      "RSS_MiB_median": 73.66015625
+    }
+  ],
+  "strict_counts_rejections_non_timing_metrics_equal_baseline": true,
+  "original_default_counting_source_byte_identical": true,
+  "measured40Mreads": false,
+  "sample_truth_is_engineering_fixture": true
+}

@@ -1,0 +1,13 @@
+{
+  "assigned_reads": 80,
+  "guides": 4,
+  "log1p_count_gini": 0.298283995018,
+  "mapping_rate_percent": 80.0,
+  "mean_count": 20.0,
+  "median_count": 20.0,
+  "raw_count_gini": 0.40625,
+  "representation_percent": 75.0,
+  "sample": "count",
+  "total_reads": 100,
+  "zero_guides": 1
+}

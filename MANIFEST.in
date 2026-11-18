@@ -1,0 +1,6 @@
+include LICENSE README.md CITATION.cff .zenodo.json CHANGELOG.md requirements-lock.txt
+recursive-include docs *.md *.txt
+recursive-include examples *.py *.tsv *.fastq *.json *.png *.md
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include benchmarks *.py *.json *.tsv *.md

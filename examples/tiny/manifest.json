@@ -1,0 +1,80 @@
+{
+  "auto_forward": {
+    "anchor_mismatch": 0,
+    "expected_counts": [
+      40,
+      25,
+      15,
+      0
+    ],
+    "fastq": "auto_forward.fastq",
+    "orientation": "auto",
+    "records": 100,
+    "sha256": "af46226f19a17ca2562fbf86fc064b684508dc4ae21ae7b808dfd5af01468951"
+  },
+  "auto_reverse": {
+    "anchor_mismatch": 0,
+    "expected_counts": [
+      40,
+      25,
+      15,
+      0
+    ],
+    "fastq": "auto_reverse.fastq",
+    "orientation": "auto",
+    "records": 100,
+    "sha256": "950f21153bcfc892033d6464c493ad82da12b15f0931d6774bf446a491d24726"
+  },
+  "mixed": {
+    "anchor_mismatch": 0,
+    "expected_counts": [
+      40,
+      25,
+      15,
+      0
+    ],
+    "fastq": "mixed.fastq",
+    "orientation": "mixed",
+    "records": 100,
+    "sha256": "7bc0f4114b466246019c20666cc0dbedf6b95cf3ae9e6a1436c485cb40820544"
+  },
+  "strict_forward": {
+    "anchor_mismatch": 0,
+    "expected_counts": [
+      40,
+      25,
+      15,
+      0
+    ],
+    "fastq": "strict_forward.fastq",
+    "orientation": "forward",
+    "records": 100,
+    "sha256": "95690e58a9db3c1a0fe77a7ea3c08d791c2ff85c54dd6a5d314e80d3a29562b1"
+  },
+  "strict_reverse": {
+    "anchor_mismatch": 0,
+    "expected_counts": [
+      40,
+      25,
+      15,
+      0
+    ],
+    "fastq": "strict_reverse.fastq",
+    "orientation": "reverse",
+    "records": 100,
+    "sha256": "7f9a40b915c15f33d5bdba3b977be230ff9bcc4a752b27c4e46424472504aeee"
+  },
+  "tolerant": {
+    "anchor_mismatch": 1,
+    "expected_counts": [
+      43,
+      29,
+      20,
+      0
+    ],
+    "fastq": "tolerant.fastq",
+    "orientation": "forward",
+    "records": 112,
+    "sha256": "bcc5b540c04beb837e4c3426a4696a8dbac0172a99c7b18ccaef48f019b13676"
+  }
+}

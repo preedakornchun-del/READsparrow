@@ -1,0 +1,17 @@
+{
+  "version": "0.12.1",
+  "scope": "stable counting/descriptiveQC only;legacy inference experimental",
+  "local_installed_wheel_test_items": 216,
+  "legacy_subtests": 98,
+  "JUnit_including_subtests": 314,
+  "independent_constructed_fixture_cases": 6,
+  "count_QC_demo_verified": true,
+  "fresh_environment_lock_install_passed": true,
+  "unchanged_runtime_modules_except_version": 33,
+  "original_alpha_sources_preserved": true,
+  "historical_benchmarks": "Explicitly alpha results; see benchmarks/historical_* and docs/VALIDATION.md. No large resource rerun for stable packaging.",
+  "creator": "Preedakorn Chunhacha",
+  "orcid": "https://orcid.org/0000-0002-5060-7113",
+  "license": "MIT",
+  "github_CI": "Live status; not yet claimed successful until actual Actions run finishes."
+}

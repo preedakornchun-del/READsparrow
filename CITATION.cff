@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the version-specific Zenodo software record when available."
+type: software
+title: "READsparrow: streaming CRISPR guide counting and quality control"
+version: 0.12.1
+date-released: '2026-11-18'
+license: MIT
+authors:
+  - family-names: Chunhacha
+    given-names: Preedakorn
+    orcid: 'https://orcid.org/0000-0002-5060-7113'
+repository-code: 'https://github.com/preedakornchun-del/READsparrow'
+url: 'https://github.com/preedakornchun-del/READsparrow'
+abstract: >-
+  Streaming exact-guide counting from FASTQ, a Pandas API, optional
+  orientation detection and anchor substitutions, and descriptive library QC.
+  The stable scope is counting/QC. Legacy statistical hit callers remain experimental.

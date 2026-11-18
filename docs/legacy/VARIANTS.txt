@@ -1,0 +1,31 @@
+READsparrow v0.12 observed-variant reporting
+
+count-flex retains exact v0.11 behavior. count-variants uses the same complete
+adapter placement and exact spacer acceptance, then reports refused nonexact
+spacers separately. Sequence groups in sequence_counts.tsv remain exact only.
+No reference is truncated or deduplicated by dropping IDs; all duplicate ID
+membership is retained and not allocated. Candidate groups are hypothetical
+reference parents, not known recovered reads.
+
+Hamming search is exhaustive through radius2 using three disjoint literal
+blocks. No radius2 neighbor is not a global nearest-distance calculation.
+Ns are explicit and not imputed. Unique Hamming1 variants expose a parent
+exact count and observed/(observed+parent) ratio; this ratio is descriptive,
+not a mutation frequency corrected for sequencing/PCR/library effects.
+
+Candidate C is inherited unchanged from the v0.11 audit. It is evaluated only
+for exact-adapter reads with complete quality-supported unique Hamming1
+spacers and no other radius2 reference. Different-group offset +/-1..3,
+reverse-complement and L-1/L+1 single-indel representations disqualify it.
+Same-group indel representations do not resolve mechanism or duplicate IDs.
+Changed-base Q<=20 and all other spacer bases Q>=20 are fixed. Q is encoded
+Phred+33, not independently measured molecular truth. Gates cannot exclude
+all genuine near-reference molecules. In particular a frequent high-quality
+variant can contain low-quality observations that also satisfy C.
+
+Observed strings have independent content-derived VAR identifiers and are
+never silently rewritten into reference SEQ identifiers. Do not sum variant
+or candidate counts into exact counts without a separately validated analysis.
+Do not treat DNA groups or recurrent variants as independent guides or neutral
+biological controls. No gene-level FDR or hit-calling accuracy follows from
+count agreement, assignment rate or constructed read-truth calibration.

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-17T14:55:26.617418+00:00",
+  "passed": true,
+  "records": 40000000,
+  "reference_guides": 1000,
+  "assigned_reads": 32000000,
+  "peak_RSS_MiB": 65.01953125,
+  "CPU_seconds": 146.303743,
+  "elapsed_seconds": 147.22304245800478,
+  "input_gzip_bytes": 449982531,
+  "input_sha256": "548ea4fb7524ce42fb18dc2611a13895263c5a093f0e0a2bcdafa5cb6fa3df45",
+  "reference_sha256": "80014f0387713e14d84a2f68e22549aaff9da2b11295c08cbd5845c6001b9fd8",
+  "not_independent_biological_evidence": true,
+  "not_a_full_genome_reference_memory_test": true
+}
