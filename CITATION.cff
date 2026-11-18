@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the version-specific Zenodo software record when available."
+message: "Please cite this software using the version-specific Zenodo DOI."
 type: software
 title: "READsparrow: streaming CRISPR guide counting and quality control"
 version: 0.12.1
@@ -15,3 +15,4 @@ abstract: >-
   Streaming exact-guide counting from FASTQ, a Pandas API, optional
   orientation detection and anchor substitutions, and descriptive library QC.
   The stable scope is counting/QC. Legacy statistical hit callers remain experimental.
+doi: '10.5281/zenodo.24332351'

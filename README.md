@@ -1,6 +1,7 @@
 # READsparrow0.12.1
 
 [![Regression tests](https://github.com/preedakornchun-del/READsparrow/actions/workflows/ci.yml/badge.svg)](https://github.com/preedakornchun-del/READsparrow/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24332351.svg)](https://doi.org/10.5281/zenodo.24332351)
 [![MIT licence](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Streaming CRISPR guide counting and descriptive library quality control.
@@ -124,8 +125,14 @@ GitHub Actions status; it is not a hard-coded success image.
 
 MIT, copyright2026Preedakorn Chunhacha. Creator ORCID:
 https://orcid.org/0000-0002-5060-7113 . See [CITATION.cff](CITATION.cff) and
-`.zenodo.json`. Use the actual version-specific Zenodo DOI once the archive is
-published; a reserved/unpublished DOI must not be presented as an available record.
+`.zenodo.json`. The published version-specific archive is
+[Zenodo 10.5281/zenodo.24332351](https://doi.org/10.5281/zenodo.24332351).
+
+Chunhacha, P. (2026). READsparrow v0.12.1: streaming CRISPR guide counting and
+quality control (0.12.1) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24332351
+
+The archive identifies the immutable `v0.12.1` tag; later citation-only main-branch
+updates do not change that tagged source or its archived wheel.
 
 The original alpha, historical results, failed attempts and prior manuscripts
 remain preserved in the original workspace. Public release contents are selected
