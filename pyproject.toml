@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "readsparrow"
-version = "0.12.1"
-description = "Streaming CRISPR counting with a DataFrame API and descriptive QC"
+version = "0.13.0"
+description = "Streaming CRISPR guide counting with anchor-bounded and supplied-adapter workflows"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"

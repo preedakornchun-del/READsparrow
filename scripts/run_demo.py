@@ -56,7 +56,7 @@ def main():
         rs.plots.depth_representation(result.counts_df,ax=axes[1],thresholds=(1,10,20,40,100))
         rs.plots.rejection_breakdown(result.rejection_stats,ax=axes[2])
         axes[0].set_title(name.replace('_',' '));axes[1].set_title('Read-depth representation')
-        fig.savefig(args.output/(name+'_qc.png'),dpi=120,metadata={'Software':'READsparrow0.12.1'});plt.close(fig)
+        fig.savefig(args.output/(name+'_qc.png'),dpi=120,metadata={'Software':'READsparrow0.13.0'});plt.close(fig)
     check=verify(args.output)
     (args.output/'verification.json').write_text(json.dumps(check,indent=2)+'\n')
     meta={'readsparrow':rs.__version__,'python':platform.python_version(),'platform':platform.platform(),

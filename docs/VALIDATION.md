@@ -1,15 +1,20 @@
 # Validation and scope
 
-Counting/QC0.12.1 is a stable packaging/reproducibility release of tested0.12.1a1.
-The runtime change is the version string; algorithms are unchanged. The original
-alpha and historical code/results/failed attempts remain preserved separately.
+Counting/QC 0.13.0 retains the tested anchor-bounded v0.12.1 workflow and extends
+the stable scope with supplied-adapter `count-flex` and its Python API. The API
+and CLI call the same streaming counting core. The original alpha and historical
+code/results/failed attempts remain preserved separately.
 
-Local regression:216test items and98subtests pass (209original +7release tests).
+Local regression: 226 test items and 98 subtests pass.
 An independent Hamming-scan oracle checks600constructed reads. Covered cases
 include19/20nt guides, both orientations, internal downstream motifs, first-window
 rules, anchor substitutions without spacer rescue, mixed reverse-complement
 collisions/single assignment, malformed inputs, QC arithmetic and plotting.
 The six portable tiny examples match independent constructed counts/QC.
+
+The `count-flex` API tests independently check adapter-led exact-spacer counts,
+duplicate-spacer non-allocation, complete reference audits, input validation and
+row-level equivalence between all four API DataFrames and the CLI TSV outputs.
 
 Historical alpha engineering results (one environment; no universal speed claim):
 100kreads/1000guides, three fresh-process repeats/mode, median CPU seconds:

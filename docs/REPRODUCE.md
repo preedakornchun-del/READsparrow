@@ -7,7 +7,7 @@ dependencies. The pinned lock is intended for3.11, not3.10.
 ```sh
 git clone https://github.com/preedakornchun-del/READsparrow.git
 cd READsparrow
-git checkout v0.12.1
+git checkout v0.13.0
 python3.11 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-lock.txt
@@ -41,6 +41,9 @@ readsparrow count --library examples/tiny/reference.tsv \
   --fastq examples/tiny/strict_forward.fastq --sample demo \
   --orientation forward --output cli-output
 readsparrow qc --counts cli-output/counts.tsv --output cli-qc
+readsparrow count-flex --library library.tsv --fastq sample.fastq.gz \
+  --sample sample --orientation forward \
+  --adapter TCTTGTGGAAAGGACGAAACACCN --output flex-output
 ```
 
 ```python
@@ -50,6 +53,13 @@ result = rs.count('examples/tiny/strict_forward.fastq',
 counts, qc, rejections = result
 print(counts)
 print(qc['mapping_rate_percent'])  #80.0
+
+flex = rs.count_guides(
+    'sample.fastq.gz', 'library.tsv', mode='count-flex', sample='sample',
+    orientation='forward', adapter='TCTTGTGGAAAGGACGAAACACCN')
+print(flex.counts_df)
+print(flex.sequence_counts_df)
+print(flex.guide_audit_df)
 ```
 
 The counting step knows input totals. A stand-alone QC table cannot reconstruct
@@ -90,7 +100,7 @@ gzip headers may differ; deterministic identity is the decompressed payload.
 
 ```sh
 python scripts/build_release.py
-python -m pip install --no-deps dist/readsparrow-0.12.1-py3-none-any.whl
+python -m pip install --no-deps dist/readsparrow-0.13.0-py3-none-any.whl
 ```
 
 `dist/SHA256SUMS.txt` identifies the exact wheel/source archive produced by that

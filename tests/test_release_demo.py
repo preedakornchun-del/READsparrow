@@ -18,4 +18,4 @@ def test_published_tiny_fixture(name):
         assert r.qc_summary[key]==pytest.approx(value) if isinstance(value,float) else r.qc_summary[key]==value
 
 def test_stable_runtime_version():
-    assert rs.__version__=='0.12.1'
+    assert rs.__version__=='0.13.0'

@@ -1,7 +1,7 @@
-# READsparrow0.12.1
+# READsparrow 0.13.0
 
 [![Regression tests](https://github.com/preedakornchun-del/READsparrow/actions/workflows/ci.yml/badge.svg)](https://github.com/preedakornchun-del/READsparrow/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24332351.svg)](https://doi.org/10.5281/zenodo.24332351)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24332350.svg)](https://doi.org/10.5281/zenodo.24332350)
 [![MIT licence](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Streaming CRISPR guide counting and descriptive library quality control.
@@ -10,11 +10,11 @@ remain experimental and do not carry a biological FDR guarantee.
 
 ## Install
 
-Download the versioned wheel from the [v0.12.1 release](https://github.com/preedakornchun-del/READsparrow/releases/tag/v0.12.1)
+Download the versioned wheel from the [v0.13.0 release](https://github.com/preedakornchun-del/READsparrow/releases/tag/v0.13.0)
 and verify its SHA256 against the release's `SHA256SUMS.txt`:
 
 ```sh
-python -m pip install 'readsparrow-0.12.1-py3-none-any.whl[plots]'
+python -m pip install 'readsparrow-0.13.0-py3-none-any.whl[plots]'
 ```
 
 The wheel is the supported archived distribution route. A bare
@@ -28,7 +28,7 @@ From a tagged source checkout:
 ```sh
 git clone https://github.com/preedakornchun-del/READsparrow.git
 cd READsparrow
-git checkout v0.12.1
+git checkout v0.13.0
 python3.11 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-lock.txt
@@ -55,6 +55,39 @@ print(counts_df['count'].tolist())  # [40,25,15,0]
 print(qc['mapping_rate_percent'])   #80.0
 ax = rs.plots.abundance_distribution(counts_df)
 ```
+
+### Supplied-adapter Python API (`count-flex`)
+
+The Python API and CLI call the same streaming counting core. Adapter edits are
+allowed, spacer edits are not. Orientation is explicit and a downstream anchor
+is not required.
+
+```python
+import readsparrow as rs
+
+result = rs.count_guides(
+    "sample.fastq.gz",
+    "library.tsv",
+    mode="count-flex",
+    sample="sample",
+    orientation="forward",
+    adapter="TCTTGTGGAAAGGACGAAACACCN",
+    max_adapter_edits=2,
+)
+
+# Uniquely identifiable guide IDs only; safe for guide-level downstream use.
+print(result.counts_df)
+
+# Full, auditable views for duplicate spacer sequences.
+print(result.sequence_counts_df)
+print(result.guide_audit_df)
+print(result.gene_counts_df)
+print(result.qc_summary)
+```
+
+When multiple reference IDs share an identical spacer, READsparrow measures the
+sequence group once. It does not copy that count to every ID. Such rows remain
+in `guide_audit_df`, while `counts_df` contains only identifiable guide IDs.
 
 ![Example QC](examples/tiny/expected/strict_forward_qc.png)
 
@@ -118,20 +151,23 @@ python scripts/build_release.py
 27-unit CPU/RAM harness, optional40M check, and wheel build. The small example
 is suitable for CI; large resource checks are optional and are not run in CI.
 `requirements-lock.txt` pins all dependencies used in the reference3.11 environment.
-Local release checks pass216test items+98subtests. The live badge reports actual
+Local release checks pass 226 test items + 98 subtests. The live badge reports actual
 GitHub Actions status; it is not a hard-coded success image.
 
 ## Licence and citation
 
 MIT, copyright2026Preedakorn Chunhacha. Creator ORCID:
 https://orcid.org/0000-0002-5060-7113 . See [CITATION.cff](CITATION.cff) and
-`.zenodo.json`. The published version-specific archive is
-[Zenodo 10.5281/zenodo.24332351](https://doi.org/10.5281/zenodo.24332351).
+`.zenodo.json`. The v0.13.0 version-specific archive is
+[Zenodo 10.5281/zenodo.24523414](https://doi.org/10.5281/zenodo.24523414).
+The all-versions concept DOI is
+[10.5281/zenodo.24332350](https://doi.org/10.5281/zenodo.24332350).
 
-Chunhacha, P. (2026). READsparrow v0.12.1: streaming CRISPR guide counting and
-quality control (0.12.1) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24332351
+Chunhacha, P. (2026). READsparrow v0.13.0: supplied-adapter and anchor-bounded
+CRISPR guide counting (0.13.0) [Software]. Zenodo.
+https://doi.org/10.5281/zenodo.24523414
 
-The archive identifies the immutable `v0.12.1` tag; later citation-only main-branch
+The archive identifies the immutable `v0.13.0` tag; later citation-only main-branch
 updates do not change that tagged source or its archived wheel.
 
 The original alpha, historical results, failed attempts and prior manuscripts
